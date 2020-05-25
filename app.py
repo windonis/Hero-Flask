@@ -8,7 +8,7 @@ from flask import Response
 app = Flask(__name__)
 
 # We establish a Flask route so that we can serve HTTP traffic on that route 
-@app.route('/get/data')
+@app.route('/')
 def person():
     with open('./data.json', 'r') as jsonfile:
         file_data = json.loads(jsonfile.read())
